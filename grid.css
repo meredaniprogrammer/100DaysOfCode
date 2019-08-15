@@ -1,0 +1,58 @@
+//My css for lesson 1 on grid.css
+
+.container{
+    background-color: #eee;
+    width: 1000px;
+    margin: 30px auto;
+
+    display: grid;
+   /*
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 150px 150px 150px;
+    */
+    grid-template-rows: repeat(3, 150px);
+    /*grid-template-columns: repeat(2, 150px);*/
+    /* If i don't want all to be eual, I would simply resize the third column*/
+    /*grid-template-columns: repeat(2, 150px) 300px;*/
+    /* This would make the third column to have a width of 300px */
+    /* Also, I can make the third column take all the remining space in the column with the code below*/
+    /*grid-template-columns: repeat(2, 150px) 1fr;*/
+    /* But then I might want to make the 3 columns eual, i would use the following code*/
+
+    grid-template-columns: repeat(3, 1fr);
+
+
+
+    /*Adding a row and a column gap*/
+    grid-gap: 20px;
+}
+.item{
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    
+}
+
+.item--1 {
+    background-color: orange;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.item--2 {
+    background-color: yellow;
+}
+.item--3 {
+    background-color: green;
+}
+.item--4 {
+    background-color: blue;
+}
+.item--5 {
+    background-color: purple;
+}
+.item--6 {
+    background-color: pink;
+}
