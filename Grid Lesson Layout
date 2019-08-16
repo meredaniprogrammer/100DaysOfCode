@@ -21,3 +21,42 @@
     </div>
 </body>
 </html>
+
+//CSS Code
+
+.challange{
+    
+    margin: 30px auto;
+    width: 1000px;
+
+    display: grid;
+    grid-template-rows: 100px 200px 400px 100px;
+    grid-template-columns: repeat(3, 1fr) 200px;
+    grid-gap: 30px;
+
+}
+.header, .smallbox-1, .smallbox-2, .smallbox-3, .main-content, .side-bar, .footer{
+    background-color: orangered;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.header{
+    grid-column: 1/-1;
+}
+.main-content{
+    grid-row: 3/4;
+    grid-column: 1/4;
+}
+.side-bar{
+    grid-row: 2/4;
+    grid-column: 4/5;
+}
+.footer{
+    grid-column: 1/-1;
+}
+
+
+
