@@ -1,5 +1,3 @@
-// Objects with methods.....A method is an object property whose value is a function
-
 let restaurant = {
     name: 'NSB',
     guestCapacity: 75,
@@ -8,10 +6,17 @@ let restaurant = {
         let seatSize = this.guestCapacity - this.guestCount
         return seatSize >= partySize
 
+    },
+    seatParty: function(partySize) {
+        this.guestCount = this.guestCount + partySize
+    },
+    removeParty: function(partySize) {
+        this.guestCount = this.guestCount - partySize
     }
 }
-let status = restaurant.checkAvailability(4)
-console.log(status)
+restaurant.seatParty(72)
+console.log(restaurant.checkAvailability(4))
+restaurant.removeParty(5)
+console.log(restaurant.checkAvailability(4))
 
-// Returns True
-
+// False, true
